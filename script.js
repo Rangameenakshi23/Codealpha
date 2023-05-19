@@ -17,10 +17,10 @@ function convertToCelsius() {
   let inputValue = degree.value;
 
 if (tempType.value === "fahrenheit") {
-    const FahrenheitToCelsius = (inputValue *(1.8)- (-32));
+    const FahrenheitToCelsius = ((inputValue -32)/1.8);
     celsiusElem.innerHTML = `${FahrenheitToCelsius.toFixed(3)} &deg;c`;
   } else if (tempType.value === "kelvin") {
-    const KelvinToCelsius = inputValue -(- 272.15);
+    const KelvinToCelsius = (inputValue - 273.15);
     celsiusElem.innerHTML = `${KelvinToCelsius.toFixed(3)} &deg;c`;
   }
 }
